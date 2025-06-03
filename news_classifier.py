@@ -43,8 +43,15 @@ def classify(news):
     return 'Real' if pred>0.5 else 'Fake'
 
 
-
-
 if user:
     result = classify(user)
     st.write(f'This news is {result}')
+
+hide_menu = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_menu, unsafe_allow_html=True)
